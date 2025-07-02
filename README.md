@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+Weather Pro App
+===============
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather Pro is a modern, full-featured weather dashboard and forecast application built with React and Node.js.
+It offers real-time weather data, severe weather alerts, air quality, sunrise/sunset, radar, advanced analytics, and more in a slick, responsive UI.
 
-## Available Scripts
+------------------------------------------------------------
+FEATURES
+------------------------------------------------------------
+- Current Weather & 5-Day Forecast for any city or location
+- Air Quality & Health Index (AQI, feels-like, health tips)
+- Severe Weather Alerts & Timelines
+- Animated Radar & (optional) Lightning Maps
+- Sun & Moon Data (sunrise, sunset, moon phase)
+- Weather Analytics (today vs. average, model comparison, precipitation)
+- Outdoor Activity & Travel Planners
+- Favorites & Recent Search (one-click switch)
+- Responsive, Mobile-friendly Design
+- Dark/Light Mode Toggle
 
-In the project directory, you can run:
+------------------------------------------------------------
+TECH STACK
+------------------------------------------------------------
+Frontend:   React, Bootstrap 5, Axios, React Toastify
+Backend:    Node.js (Express), Axios, CORS
+APIs:       OpenWeatherMap, Open-Meteo, NewsAPI
+Extras:     Modular components, sidebar widgets, advanced planners
 
-### `npm start`
+------------------------------------------------------------
+FOLDER STRUCTURE
+------------------------------------------------------------
+/src
+  /components
+    /sidebar
+    WeatherCard.js
+    ForecastCard.js
+    ...
+  /pages
+    HomePage.js
+    StormTracker.js
+    TravelPlanner.js
+    ...
+  App.js
+  index.js
+/server
+  index.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+------------------------------------------------------------
+GETTING STARTED
+------------------------------------------------------------
+1. Clone the Repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   git clone https://github.com/yourusername/weather-pro-app.git
+   cd weather-pro-app
 
-### `npm test`
+2. Install Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   # For React app
+   npm install
 
-### `npm run build`
+   # For backend server
+   cd server
+   npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. API Keys Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Get your API key from https://openweathermap.org/api
+   - (Optional) NewsAPI key for weather news
+   - Add keys to /server/index.js or (recommended) in a .env file:
+         API_KEY=your_openweathermap_api_key_here
+         NEWS_API_KEY=your_newsapi_key_here
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Run Backend Server
 
-### `npm run eject`
+   cd server
+   node index.js
+   # Or use nodemon for hot reload:
+   # npx nodemon index.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Run React Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   cd ..
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   - The app runs at http://localhost:3000
+   - The backend server runs at http://localhost:5000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+------------------------------------------------------------
+ENVIRONMENT VARIABLES
+------------------------------------------------------------
+- For local development, create a .env file in root:
+    REACT_APP_API_URL=http://localhost:5000
 
-## Learn More
+------------------------------------------------------------
+DEVELOPMENT NOTES
+------------------------------------------------------------
+- All weather/forecast/air quality requests are proxied via the backend for security
+- Add/remove sidebar widgets or pages in /components/sidebar/ and /pages/
+- New features/components are in separate files for modularity and easy scaling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+------------------------------------------------------------
+PRODUCTION BUILD
+------------------------------------------------------------
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+------------------------------------------------------------
+CREDITS
+------------------------------------------------------------
+- OpenWeatherMap (https://openweathermap.org/)
+- Open-Meteo (https://open-meteo.com/)
+- React Toastify (https://fkhadra.github.io/react-toastify/)
+- All open-source contributors and libraries
 
-### Code Splitting
+------------------------------------------------------------
+CONTRIBUTING
+------------------------------------------------------------
+Pull requests welcome! Open issues for suggestions or bug reports.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+------------------------------------------------------------
+LICENSE
+------------------------------------------------------------
+MIT
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Weather Pro App — Your professional weather dashboard!
