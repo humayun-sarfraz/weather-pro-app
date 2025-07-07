@@ -2,7 +2,7 @@ Weather Pro App
 ===============
 
 Weather Pro is a modern, full-featured weather dashboard and forecast application built with React and Node.js.
-It offers real-time weather data, severe weather alerts, air quality, sunrise/sunset, radar, advanced analytics, and more in a slick, responsive UI..
+It offers real-time weather data, severe weather alerts, air quality, sunrise/sunset, radar, advanced analytics, and more in a slick, responsive UI.
 
 ------------------------------------------------------------
 FEATURES
